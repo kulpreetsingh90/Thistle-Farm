@@ -1,0 +1,136 @@
+@import "variable";
+@import "navigation";
+
+
+
+
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.6em);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: $zero;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.logo{
+    padding: $copyright-padding;
+}
+
+img {
+   width: 100%;
+}
+
+.welcome_note{
+    font-size: $welcome-note;
+    text-align: center;
+
+    @include desktop {
+        font-size: $welcome-note + .2em;
+    }
+}
+
+.farm-info {
+
+   @extend %flex-column;
+    .family_info {
+        padding: $family_info-padding;
+    }
+       
+    @include tablet {
+      
+        flex-direction: row;
+        .owner {
+            padding: $copyright-padding;
+        }
+        
+         .family_info{
+             font-size: $family_info-font-size;
+             padding: $family_info-padding;
+         }
+        
+    }
+}
+
+.categories {
+    background-color: $categories-background-color;
+    padding: $copyright-padding;
+}
+
+    .label{
+        font-size: $welcome-note + .20em;
+        text-align: center;
+    }
+
+    .pictures{
+       @include tablet{
+        display: grid;
+        grid-template-columns: repeat(3,  1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 1em;
+        grid-auto-flow: dense;
+
+        .categories_pics1 {
+            grid-column: 1fr;
+        }
+
+        .categories_pics2 {
+         grid-column: 1fr;
+     }
+
+     .categories_pics3 {
+         grid-column: 1fr;
+     }
+
+    }
+
+   }
+
+footer {
+    background-color: $footer-background-color;
+    color: $footer-color;
+}
+
+.footer_info{
+
+    padding: $copyright-padding;
+      @include tablet {
+        display: grid;
+        grid-template-columns: repeat(3,  1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 1em;
+        grid-auto-flow: dense;
+        padding: $footer_info-padding;
+        font-size: $welcome-note + 0.20em;
+
+   .footer-sitemap1 {
+            grid-column: 1fr;
+    }
+
+    .footer-sitemap2{
+            grid-column: 1fr;
+    }
+
+    .footer-sitemap3{
+        grid-column: 1fr;
+    }
+
+    }
+}   
+
+.copyright {
+    text-align: center;
+    padding: $copyright-padding;
+    background-color: $copyright-background;
+    
+    @include tablet {
+        font-size: $welcome-note + 0.20em;
+    }
+}

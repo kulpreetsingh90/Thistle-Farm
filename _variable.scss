@@ -1,0 +1,58 @@
+//media queries
+$desktop: 60em;
+$tablet: 40em;
+@mixin desktop{
+    @media(min-width:$desktop){
+      @content;
+    }
+}
+@mixin tablet{
+    @media(min-width:$tablet){
+      @content;
+    }
+}
+
+
+//placeholders
+%flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+//colors
+$nav-visited: black;
+$nav-hover: red;
+$categories-background-color: #FDF2E9;
+$footer-background-color:  #6C6662;
+$footer-color: white;
+$copyright-background: #57524E;
+
+
+//paddings
+$label-padding: 3em 1em 2em 18em;
+$li-padding: 1em;
+$ul-padding: 0em 0em 0em 18em;
+$family_info-padding: 0 3em 0 4em;
+$picture-padding: 0 1em 1em 1em;
+$footer_info-padding: 3em;
+$copyright-padding: 1em;
+
+
+//margins
+$zero: 0;
+
+
+//border
+$a-border-bottom: 1px solid #EAEAEB;
+
+
+//font
+$welcome-note: 0.5em;
+$family_info-font-size: 0.9rem;
+$footer-font-size: 0.8em;

@@ -1,0 +1,69 @@
+.navigational-area {
+    @extend %flex-row;
+    flex-wrap: wrap;
+
+    label{
+        display: block;
+        cursor: pointer;
+        padding: $label-padding;
+    }
+
+    .nav {
+        text-align: center;
+        width: 100%;
+        display: none;
+
+        li{
+         list-style-type: none; 
+         padding: $li-padding;
+
+           a{
+                display: block;
+                border-bottom: $a-border-bottom;
+                margin: $zero;
+            }
+
+            a:link {
+                    font-weight: bold;
+                    text-decoration: none;
+            }
+
+            a:visited {
+                    color: $nav-visited;
+            }
+
+            a:hover {
+                    text-decoration: underline;
+                    color: $nav-hover;
+            }
+         }
+    }
+
+    #toggle:checked + ul{
+        display: block;
+    }
+
+    #toggle{
+        display: none;
+    }
+
+    @include tablet{
+        flex-wrap: nowrap;
+        font-size: $family_info-font-size;
+
+    .nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+    #toggle{
+            display: none;
+    }
+
+    label{
+            display: none;
+    }
+    }
+
+}
